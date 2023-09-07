@@ -6,9 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{route('payWithMomo')}}" method="POST">
-        @csrf
-        <button>Thanh Toán Momo</button>
-    </form>
+
+<button>
+  <a href="{{url('/momo-pay')}}">Thanh toan momo</a>
+</button>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
 </body>
 </html>

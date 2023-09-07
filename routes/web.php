@@ -24,6 +24,7 @@ Route::get('/payment', function () {
 });
 
 Route::get('/payment-success', [PaymentController::class, 'paymentSuccess']);
-Route::post('/momo-pay', [PaymentController::class, 'momoPay'])->name('payWithMomo');
+
+Route::get('/momo-pay', [PaymentController::class, 'momoPay'])->name('payWithMomo');
 
 Route::get('/momo-atm-pay', [PaymentController::class, 'momoATMPay'])->name('payAtmMomo');
