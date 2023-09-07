@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <span>hello world</span>
+    <form action="{{route('payWithMomo')}}" method="POST">
+        @csrf
+        <button>Thanh Toán Momo</button>
+    </form>
 </body>
 </html>

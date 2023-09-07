@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,8 @@ Route::get('/', function () {
 Route::get('/payment', function () {
     return view('payment');
 });
+
+Route::get('/payment-success', [PaymentController::class, 'paymentSuccess']);
+Route::post('/momo-pay', [PaymentController::class, 'momoPay'])->name('payWithMomo');
+
+Route::get('/momo-atm-pay', [PaymentController::class, 'momoATMPay'])->name('payAtmMomo');
